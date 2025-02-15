@@ -1,0 +1,82 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.App {
+  margin: 0;
+  height: 100%;
+  background-color: #eed7a1;
+  min-height: 100vh;
+  color: #f7efd3;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.words {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  grid-template-rows: repeat(4, 1fr); /* Creates 4 rows with 100px height */
+  gap: 10px;
+}
+
+.words label {
+  cursor: pointer;
+  background-color: #8a8583; 
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  font-size: 20px;
+}
+.words .selectred {
+  background-color: #493D9E;
+  cursor: not-allowed;
+}
+
+.words .corrent {
+  background-color: #3D8D7A;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+
+.validators {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.validator {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2a2a2b;
+}
+
+.validator.open {
+  background-color: #3D8D7A;
+  cursor: not-allowed;
+  color: #000;
+  text-decoration: line-through;
+}
+
+.validator .icon {
+  padding: 20px 50px;
+}
+
+.validator-words {
+  align-items: center;
+  flex: 1;
+  display: flex;
+  gap: 50px;
+  font-size: 30px;
+  padding: 10px 50px;
+}
